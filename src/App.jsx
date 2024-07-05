@@ -22,8 +22,10 @@ const App = () => {
         <Toaster />
         <Router>
           <Routes>
-            <Route path="/" element={<Index />} />
-            {/* Add more routes here as needed */}
+            <Route path="/" element={<Layout />}>
+              <Route index element={<Index />} />
+              {/* Add more routes here as needed */}
+            </Route>
           </Routes>
         </Router>
       </TooltipProvider>
